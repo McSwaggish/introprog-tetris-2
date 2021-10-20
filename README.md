@@ -1,2 +1,6 @@
-# introprog-tetris-2
-not shitty
+## introprog-tetris-2
+### todo
+- [ ] matrix stuff
+- [ ] tetrominoes nextpos
+- [ ] graphics
+- [ ] handling
