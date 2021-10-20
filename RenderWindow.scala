@@ -11,6 +11,10 @@ class RenderWindow(
     val window = new PixelWindow(windowSize._1, windowSize._2, "TETRIS TIME", java.awt.Color(0xf1, 0xf1, 0xf1))
     window.show()
 
+    def draw(x: Int, y: Int, colour: java.awt.Color): Unit =
+        window.fill(x * blockSize - 1, y * blockSize - 1, blockSize + 2, blockSize + 2, java.awt.Color(0x1d, 0x1d, 0x1d))
+        window.fill(x * blockSize + 1, y * blockSize + 1, blockSize - 2, blockSize - 2, colour)
+
     def clear(x: Int, y: Int): Unit =
         window.fill(x * blockSize, y * blockSize, blockSize, blockSize, java.awt.Color(0xbe, 0xbe, 0xbe))
         window.fill(x * blockSize + 1, y * blockSize + 1, blockSize - 2, blockSize - 2, java.awt.Color(0xff, 0xff, 0xff))
